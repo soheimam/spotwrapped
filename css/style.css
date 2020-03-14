@@ -5,4 +5,17 @@ body{
     font-family: 'Lato', 'Open Sans', sans-serif,;
 }
 
+.content-container{
+  width: 100vw;
+  height: 100vh;
+  scroll-snap-type: block;
+  scroll-padding-block: 0;
+}
 
+.content-container:nth-of-type(odd){
+  background-image: linear-gradient(to right, #DBF685 , #DBF685);
+}
+
+.content-container:nth-of-type(even){
+  background-image: linear-gradient(to right, #E84B9E , #E84CA6);
+}
