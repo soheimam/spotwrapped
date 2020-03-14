@@ -15,6 +15,7 @@ body{
   scroll-snap-align: start;
   display: flex;
   flex-wrap: wrap;
+  padding: 1.4rem;
 }
 
 .content-container:nth-of-type(odd){
@@ -46,7 +47,11 @@ h2{
   width: 100%;
   padding: 10% 20%;
 }
+
 .content-container_text{
   width: 100%;
+}
 
+.content-container:first-of-type p{
+  text-align: center;
 }
