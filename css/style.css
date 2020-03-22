@@ -16,6 +16,11 @@ body{
   display: flex;
   flex-wrap: wrap;
   padding: 1.4rem;
+  box-sizing: border-box;
+}
+
+.content-container:first-of-type{
+  justify-content: center;
 }
 
 .content-container:nth-of-type(odd){
@@ -31,6 +36,7 @@ h1{
   font-size: 8rem;
   width: 100%;
   padding: 10% 20%;
+  align-self: center;
 }
 
 .content-container:nth-of-type(odd) h1{
@@ -54,4 +60,14 @@ h2{
 
 .content-container:first-of-type p{
   text-align: center;
+}
+
+button{
+  width: 300px;
+  border-radius: 50px;
+  height: 70px;
+  background-color: #E84CA6;
+  stroke: #E84CA6;
+  text-transform: uppercase;
+  color: #DBF685;;
 }
