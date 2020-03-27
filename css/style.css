@@ -7,6 +7,7 @@ html{
 body{
     font-family: 'Lato', 'Open Sans', sans-serif;
     font-size: 16px;
+    overflow-x: hidden;
 }
 
 .content-container{
@@ -70,4 +71,8 @@ button{
   stroke: #E84CA6;
   text-transform: uppercase;
   color: #DBF685;;
+}
+
+.canvas-container{
+  width: inherit;
 }
