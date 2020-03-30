@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="./css/reset.css">
     <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -25,11 +26,15 @@
         </section>
 
         <section class='content-container'>
-          <h1>Title section 1</h1>
+          <h1 id='month'>January</h1>
 
            <div class='content-container_text'>
              <p>lorem ipsum blahblahblah</p>
            </div>
+
+           <div class="nav">
+            <button id="pause">pause</button>
+          </div>
 
         </section>
 
@@ -45,4 +50,5 @@
 </body>
 <script src='./js/library/p5.min.js'></script>
 <script src='./js/index.js'></script>
+<script src='./js/gsap.js'></script>
 </html>

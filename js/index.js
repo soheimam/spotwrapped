@@ -1,6 +1,6 @@
 
 let graphic
-console.log(typeof graphic)
+
 
 function setup(){
     background('#E84CA6')

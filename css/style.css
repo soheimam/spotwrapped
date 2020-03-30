@@ -40,6 +40,8 @@ h1{
   align-self: center;
 }
 
+
+
 .content-container:nth-of-type(odd) h1{
   color: #E84B9E;
 }
@@ -75,4 +77,8 @@ button{
 
 .canvas-container{
   width: inherit;
+}
+
+ #month{
+  font-size: 18rem;
 }
