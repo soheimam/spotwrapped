@@ -80,5 +80,8 @@ button{
 }
 
  #month{
-  font-size: 18rem;
+  font-size: 25rem;
+  letter-spacing: -22px;
+  transform:rotateX(-280deg);
+  /* rotationX: -280 */
 }

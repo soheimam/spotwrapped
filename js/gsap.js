@@ -1,7 +1,20 @@
 
 const element = document.getElementById('month')
 
-const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']
+const months = [
+   'JAN',
+   'FEB',
+   'MAR',
+   'APR',
+   'MAY',
+   'JUN',
+   'JUL',
+   'AUG',
+   'SEP',
+   'OCT',
+   'NOV',
+   'DEC'
+]
 
 
 let month
@@ -9,45 +22,24 @@ let month
 let objectUpdate;
 
 
+const onRepeat = () => {
+   let next;
+   const element = document.getElementById('month')
 
- for(let i = 0; i < months.length; i++) {
-  
-    setTimeout(()=>{
-         month = months[i];
-         element.innerHTML = month.toUpperCase();
-         console.log(month, i, objectUpdate)
-         objectUpdate = true;
-    },i * 2000, );
-    onUpdate()
- }
+   next = months[months.indexOf(element.innerHTML) + 1] || months[0]
 
- function onUpdate(){
-
-   objectUpdate = false;
-   // console.log(objectUpdate)
+   element.innerHTML = next
 }
 
- console.log(objectUpdate)
+const timeLine = gsap.timeline({
+   yoyo: true,
+   repeat: -1,
+   onRepeat: onRepeat,
+   onRepeatParams: months,  
+})
+
+let tween = timeLine.to(element, {duration: 1,  rotationX: -180,  ease:Linear.easeNone})
+// timeLine.to(element, {duration: 0.5,  rotationX: 180,  ease:Linear.easeNone })
 
 
- const timeLine = gsap.timeline({
-    yoyo:true,
-    repeat:months.length
- })
- timeLine.to(element, {duration: 1,rotationX: 0})
- timeLine.to(element, {duration: 0.3, opacity:0.1});
- timeLine.from(element, {duration: 1,rotationX: 360, opacity: 1})
- 
- timeLine.duration(5);
-//  gsap.to(element, {duration: 0.2, opacity: 0.3, rotationX: 360});
-//  gsap.to(element, {duration: 0.5, opacity: 1, rotationX: 360});
-// const animation = gsap.to(element, {
-//     duration: 1,
-//     rotationX: 360,
-// });
-// animation.yoyo(true).repeat(months.length);
-
-
-
-// console.log(animation.isActive());
-
+console.log(element._gsTransform.rotationX)
